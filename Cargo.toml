@@ -14,7 +14,7 @@ keywords    = ["tun", "network", "tunnel", "bindings"]
 libc      = "0.2"
 thiserror = "1"
 
-[target.'cfg(any(target_os = "linux", target_os = "macos"))'.dependencies]
+[target.'cfg(any(target_os = "linux", target_os = "macos", target = "android"))'.dependencies]
 ioctl      = { version = "0.5", package = "ioctl-sys" }
 mio        = { version = "0.6", optional = true }
 tokio      = { version = "0.2", features = ["full"], optional = true }
